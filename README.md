@@ -1,4 +1,4 @@
-![node.js](/img/nodejs.svg)
+![node.js](./img/nodejs.svg)
 
 ___
 
