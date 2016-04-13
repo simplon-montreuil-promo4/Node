@@ -1,29 +1,37 @@
+
 ![node.js](./img/nodejs.svg)
 
 ___
 
 Pourquoi __Node.js__ semble-t-il aussi apprécié des développeurs web ?
-+ Pourquoi avoir utilisé un langage comme *JavaScript* ? Je croyais que c’était juste pour faire des effets dans sa page web ?+ D’où vient cette rapidité supposée de Node.js ? À quoi ça peut me servir ?+ Est-ce que ce truc est mature ? Qui l’utilise (à part des geeks barbus !) ? Devrais-jel’utiliser moi aussi ?
-===
++ Pourquoi avoir utilisé un langage comme *JavaScript* ? Je croyais que c’était juste pour faire des effets dans sa page web ?
++ D’où vient cette rapidité supposée de Node.js ? À quoi ça peut me servir ?
++ Est-ce que ce truc est mature ? Qui l’utilise (à part des geeks barbus !) ? Devrais-je
+l’utiliser moi aussi ?
+===
 # Installation :
 1. Un peu d'histoire :
 	+ je vous recommande de regarder sur [OpenClassRooms](https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/node-js-mais-a-quoi-ca-sert)
 	+ Du javascript côté serveur :
-	> Node.js est un environnement de développement qui permet de coder côté ser- veur en JavaScript. En ce sens il peut être comparé à PHP, Python/Django, Ruby on Rails, etc. Écrire une application en Node.js demande une gymnastique d’esprit particu- lière : tout est basé sur des évènements ! Node.js est reconnu et apprécié pour sa rapidité : un programme Node.js n’attend jamais inutilement sans rien faire !
- 
+	> Node.js est un environnement de développement qui permet de coder côté ser- veur en JavaScript. En ce sens il peut être comparé à PHP, Python/Django, Ruby on Rails, etc. Écrire une application en Node.js demande une gymnastique d’esprit particu- lière : tout est basé sur des évènements !
+ Node.js est reconnu et apprécié pour sa rapidité : un programme Node.js n’attend jamais inutilement sans rien faire !
+ 
 2. les commandes :
 
 ```
-	sudo apt-get install python-software-properties python g++ make sudo add-apt-	repository ppa:chris-lea/node.js 	sudo apt-get update 	sudo apt-get install nodejs
- ```
- + Vérifier la version de node :
- `node -v`
- + Tester __Node.js__ :
- 
+	sudo apt-get install python-software-properties python g++ make sudo add-apt-	repository ppa:chris-lea/node.js
+ 	sudo apt-get update
+ 	sudo apt-get install nodejs
+ ```
+ + Vérifier la version de node :
+ `node -v`
+ + Tester __Node.js__ :
+ 
 A mettre dans un fichier `monfichier.js`:
- `console.log('Recoucou dans Node.js !');`
- Maintenant on lance `node monfichier.js` .
- ___
+ `console.log('Recoucou dans Node.js !');`
+ Maintenant on lance `node monfichier.js` .
+ 
+___
 ## Un serveur HTTP basique:
 
 Point de départ de ma première application « réelle » avec Node.js, je me suis bien sûr demandé comment je devais la coder, mais aussi comment organiser mon code.
@@ -70,7 +78,8 @@ Nous aurions pu écrire le code démarrant le serveur et le faisant écouter le 
 	var http = require("http");
 	var server = http.createServer();
 
-	server.listen(8888); Ce code ne fait rien d'autre que de démarrer un serveur HTTP écoutant le port 8888 (il ne renvoie aucun résultat aux requêtes reçues).
+	server.listen(8888);
+ Ce code ne fait rien d'autre que de démarrer un serveur HTTP écoutant le port 8888 (il ne renvoie aucun résultat aux requêtes reçues).
 
 La partie vraiment intéressante (et qui pourra sembler bizarre à ceux habitués à des langages plus conventionnels comme PHP) est la présence d'une définition de fonction comme paramètre de la fonction `createServer()`.
 
@@ -173,7 +182,4 @@ Notez l'utilisation de `console.log() pour afficher un message dès que `onReque
 Quand nous lançons ce code (`node server.js`, comme d'habitude), il va aussitôt afficher « Démarrage du serveur. » dans la console. Dès que nous appelons notre serveur (en ouvrant une page à l'adresse `http://localhost:8888`), le message « Requête reçue. » s'affiche à son tour.
 
 Voilà notre JavaScript événementiel asynchrone et ses fonctions de rappel en action !
- 
-
-
-
+ 
