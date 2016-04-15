@@ -1,0 +1,10 @@
+#### Introduction à Node.js :
+Pour commencer rendez-vous sur [nodeschool.io](http://nodeschool.io).
+
+* Puis et regarder comment installer le projet `learnyounode` :
+	
+		npm install -g learnyoucode
+* ensuite lancer la commande `learnyounode` ppour accéder à un menu contextuel qui sera accessible avec les flèches directionnelles.
+
+* Essayer de finir ces exercies pour comprendre le fonctionnement de node ( de manière simple).
+
