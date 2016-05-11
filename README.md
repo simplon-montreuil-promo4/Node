@@ -199,7 +199,7 @@ Enfin, nous appelons `response.end()` pour terminer la réponse.
 
 #### Trouver une place pour notre serveur :
 
-Je vous avais promis de revenir sur la façon d'organiser notre application. Nous avons le code de notre rudimentaire serveur HTTP dans le fichier server.js. Je vous avais indiqué qu'il était courant d'utiliser un fichier `index.js` pour amorcer et démarrer l'application en initialisant les autres modules nécessaires à l'application (comme le serveur HTTP dans server.js).
+Je vous avais promis de revenir sur la façon d'organiser notre application. Nous avons le code de notre rudimentaire serveur HTTP dans le fichier `server.js`. Je vous avais indiqué qu'il était courant d'utiliser un fichier `index.js` pour amorcer et démarrer l'application en initialisant les autres modules nécessaires à l'application (comme le serveur HTTP dans server.js).
 
 Voyons comment transformer server.js en véritable module Node.js que l'on pourra utiliser dans notre futur fichier `index.js`.
 
