@@ -14,4 +14,4 @@ Pour commencer rendez-vous sur [nodeschool.io](http://nodeschool.io).
 
 ___
 #### Back End Powwa !!:
-1. lire l'article (EN) : [comprendre Express.js](http://http://evanhahn.com/understanding-express/).
+1. lire l'article (EN) : [comprendre Express.js](http://evanhahn.com/understanding-express/).
