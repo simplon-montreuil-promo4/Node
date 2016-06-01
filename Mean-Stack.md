@@ -8,6 +8,8 @@ ___
 * [Resources sur Node.js (EN)](http://project70.com/)
 * [les NodeCasts (podcasts)](http://nodecasts.net/)
 * [Faire un blog en node (pas à pas)](https://howtonode.org/express-mongodb)
+* [article sur SQL vs. NoSQL]( http://sametmax.com/nosql-arretons-de-dire-nimporte-quoi/)
+* [un autre article](http://constellation.tech/nosql-vs-sql-comprendre-la-difference-de-performance/)
 
 #### Installation :
 * installer `Mongo.DB`:
