@@ -5,7 +5,7 @@
 #### Connexion à MongoDB
 La connexion est très simple : 
 
-```
+```js
 var mongoose = require('mongoose');
 
 mongoose.connect('localhost');
@@ -17,7 +17,7 @@ mongoose.connect('localhost');
 
 Avant de faire quoique se soit. Vous devez d'abord definir le schema Mongoose. Si vous êtes familier avec le SQL, c'est le même concept ici. Le Schema represente la structure de la database MongoDB. Par exemple, avec  `Comment` le schema devrait ressembler à ça:
 
-```
+```js
 var CommentSchema = new Schema({
   name: { type: String, default: 'Guest' }
   age: { type: Number, min: 18, index: true }
@@ -27,7 +27,7 @@ var CommentSchema = new Schema({
 ```
 un autre exemple avec un `Blog`:
 
-```
+```js
 var BlogSchema = new Schema({
   title:  String,
   author: String,
@@ -43,7 +43,7 @@ var BlogSchema = new Schema({
 ```
 Et voici un autre exemple avec un autre schema `User`. Dans cette exemple, on spécifie `required` et `unique` qui sont des contraintes, si ces contraintes sont violés, alors l'opération rate et une erreur survient.
 
-```
+```js
 var UserSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
@@ -52,7 +52,7 @@ var UserSchema = new mongoose.Schema({
 ```
 Chaque schema dans une collection MongoDB. et chanque clés - username, email, password, definissent les propriétés du document MongoDB. Par exemple, voilà comment un `user` devrait être dans la database:
 
-```
+```js
 > db.users.findOne()
 {
     "__v" : 0,
@@ -88,7 +88,7 @@ Ici la liste des types dans un Schema, avec leurs propriétes:
 #### Definir un model
 Le model dans Mongoose eset la chose qu'il faut **absolument** avoir pour interagir avec MongoDB. Pour creer un model `User` qui utilise le schema defini avant. On doit lui donner le nom de la collection comme premier argument et lui passer le schema de mongoose en second.
 
-```
+```js
 var User = mongoose.model('User', UserSchema);
 ```
 		
