@@ -91,4 +91,26 @@ Le model dans Mongoose eset la chose qu'il faut **absolument** avoir pour intera
 ```js
 var User = mongoose.model('User', UserSchema);
 ```
-		
+
+####CRUD operations
+Trouver des documents est assez
+
+```js
+// trouver un seul utilisateur
+User.findOne({ username: 'alice' }, function(err, user) {
+  console.log(user);
+});
+
+// trouver tous les utilisateurs
+User.find(function(err, users) {
+  console.log(users);
+});
+```
+Ou si vous connaissez l'ObjectId you pouvez utiliser la méthode :`findById` 
+```js
+var _id = '530c17c1fb8c96752498e120';
+
+User.findById(_id, function(err, user) {
+  console.log(user);
+});
+```
