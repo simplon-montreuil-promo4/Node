@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+	<h1>Bienvenue sur RORO CRM!</h1>
+
+	<div ng-if="!main.loggedIn">
+		<p>se connecter pour gérer les utilisateurs.</p>
+		<a href="/login" class="btn btn-primary">Connexion</a>
+	</div>
+
+	<div ng-if="main.loggedIn">
+		<p>Gérer ses utilisateurs.</p>
+		<a href="/users" class="btn btn-primary">Voir les Utilisateurs</a>
+	</div>
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>User CRM</title>
+
+	<!-- FOR ANGULAR ROUTING -->
+	<base href="/">
+
+	<!-- CSS  -->
+	<!-- load bootstrap from CDN and custom CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- JS -->
+	<!-- load angular and angular-route via CDN -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+
+	<!-- controllers -->
+	<script src="app/controllers/mainCtrl.js"></script>
+	<script src="app/controllers/userCtrl.js"></script>
+
+	<!-- services -->
+	<script src="app/services/authService.js"></script>
+	<script src="app/services/userService.js"></script>
+
+	<!-- main Angular app files -->
+	<script src="app/app.routes.js"></script>
+	<script src="app/app.js"></script>
+</head>
+<body ng-app="userApp" ng-controller="mainController as main">
+
+<!-- NAVBAR -->
+<header>
+	<div class="navbar navbar-inverse" ng-if="main.loggedIn">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="/" class="navbar-brand"><span class="glyphicon glyphicon-fire text-danger"></span> Roro CRM</a>
+		</div>	
+		<ul class="nav navbar-nav">
+			<li><a href="/users"><span class="glyphicon glyphicon-user"></span> Utilisateurs</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li ng-if="!main.loggedIn"><a href="/login">Connexion</a></li>
+			<li ng-if="main.loggedIn" class="navbar-text">bonjour, {{ main.user.username }}!</li>
+			<li ng-if="main.loggedIn"><a href="#" ng-click="main.doLogout()">Déconnexion</a></li>
+		</ul>
+	</div>
+	</div>
+</header>
+
+<main class="container">
+	<!-- ANGULAR VIEWS -->
+	<div ng-view></div>
+</main>
+
+</body>
+</html>
